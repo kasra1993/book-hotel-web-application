@@ -1,13 +1,13 @@
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
+import Home from "./pages/home/Home.js";
+import Login from "./pages/login/Login.jsx";
 import List from "./pages/list/List";
-import Single from "./pages/single/Single";
+import Single from "./pages/single/Single.jsx";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
-import "./style/dark.scss";
+// import "./style/dark.scss";
 import { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext";
+// import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import { Navigate } from "react-router";
 import { roomColumns, userColumns } from "./datatablesource";
@@ -16,7 +16,7 @@ import NewHotel from "./pages/newHotel/NewHotel";
 import NewRoom from "./pages/newRoom/NewRoom";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
+  // const { darkMode } = useContext(DarkModeContext);
   const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
     if (!user) {
@@ -25,7 +25,7 @@ function App() {
     return children;
   };
   return (
-    <div className={darkMode ? "app dark" : "app"}>
+    <div className="app">
       <BrowserRouter>
         <Routes>
           <Route path="/">

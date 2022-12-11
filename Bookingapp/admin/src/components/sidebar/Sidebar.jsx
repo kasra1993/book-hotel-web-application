@@ -12,11 +12,11 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
-import { DarkModeContext } from "../../context/darkModeContext";
+// import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 
 const Sidebar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  // const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
@@ -88,7 +88,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      <div className="bottom">
+      {/* <div className="bottom">
         <div
           className="colorOption"
           onClick={() => dispatch({ type: "LIGHT" })}
@@ -97,7 +97,7 @@ const Sidebar = () => {
           className="colorOption"
           onClick={() => dispatch({ type: "DARK" })}
         ></div>
-      </div>
+      </div> */}
     </div>
   );
 };
